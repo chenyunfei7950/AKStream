@@ -115,7 +115,6 @@ if [ "$ACTION" == run-keeper ]; then
 fi
 
 
-
 if [ "$ACTION" == deploy-Web ]; then
   # shellcheck disable=SC2046
   docker stop $(docker ps | grep $APP_WEB_NAME | awk '{print $1}')
