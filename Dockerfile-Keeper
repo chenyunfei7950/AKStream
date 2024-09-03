@@ -1,8 +1,8 @@
-#×÷Õß(author):×Ô¶¯³©(auto-chang)
-#Î¢ĞÅºÅ(WeChat):×Ô¶¯³©(auto-chang)
-#¹«ÖÚºÅ(WeChat official account)£º³©ÁÄÁË¸ö¿Æ¼¼(IT-chang)
-#Ê±¼ä(Time)£º2023Äê4ÔÂ22ÈÕ£¬ĞÇÆÚÁù(Saturday, April 22, 2023)
-#ÃèÊö(Describe£ºÎª°®·¢µç(Power Generation for Love)
+#ä½œè€…(author):è‡ªåŠ¨ç•…(auto-chang)
+#å¾®ä¿¡å·(WeChat):è‡ªåŠ¨ç•…(auto-chang)
+#å…¬ä¼—å·(WeChat official account)ï¼šç•…èŠäº†ä¸ªç§‘æŠ€(IT-chang)
+#æ—¶é—´(Time)ï¼š2023å¹´4æœˆ22æ—¥ï¼Œæ˜ŸæœŸå…­(Saturday, April 22, 2023)
+#æè¿°(Describeï¼šä¸ºçˆ±å‘ç”µ(Power Generation for Love)
 
 FROM ubuntu-zlm-ffmpeg-dotnet AS keeper
 WORKDIR /root/src

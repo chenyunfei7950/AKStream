@@ -71,18 +71,18 @@ if [ "$ACTION" == deploy-keeper ]; then
   # shellcheck disable=SC2046
   #docker rmi $(docker images | grep $APP_KEEPER_NAME | awk '{print $3}')
 
-  docker run -p 6880:6880 \
+  docker run -p 36880:6880 \
     -p 10001-10010:10001-10010 \
     -p 10001-10010:10001-10010/udp \
     -p 20002-20200:20002-20200 \
     -p 20002-20200:20002-20200/udp \
-    -p 6881:80 \
-    -p 6882:1935 \
-    -p 6883:554 \
-    -p 6883:554/udp \
+    -p 36881:80 \
+    -p 36882:1935 \
+    -p 36883:554 \
+    -p 36883:554/udp \
     -p 10000:10000 \
     -p 10000:10000/udp \
-    -p 8000:8000/udp \
+    -p 38000:8000/udp \
     -p 30000-30035:30000-30035/udp \
     -v ./AKStreamKeeper/Config/AKStreamKeeper.json:/root/AKStreamKeeper/Config/AKStreamKeeper.json \
     -v ./AKStreamKeeper/Config/logconfig.xml:/root/AKStreamKeeper/Config/logconfig.xml \
@@ -93,18 +93,18 @@ if [ "$ACTION" == deploy-keeper ]; then
 fi
 
 if [ "$ACTION" == run-keeper ]; then
-  docker run -p 6880:6880 \
+  docker run -p 36880:6880 \
     -p 10001-10010:10001-10010 \
     -p 10001-10010:10001-10010/udp \
     -p 20002-20200:20002-20200 \
     -p 20002-20200:20002-20200/udp \
-    -p 6881:80 \
-    -p 6882:1935 \
-    -p 6883:554 \
-    -p 6883:554/udp \
+    -p 36881:80 \
+    -p 36882:1935 \
+    -p 36883:554 \
+    -p 36883:554/udp \
     -p 10000:10000 \
     -p 10000:10000/udp \
-    -p 8000:8000/udp \
+    -p 38000:8000/udp \
     -p 30000-30035:30000-30035/udp \
     -v ./AKStreamKeeper/Config/AKStreamKeeper.json:/root/AKStreamKeeper/Config/AKStreamKeeper.json \
     -v ./AKStreamKeeper/Config/logconfig.xml:/root/AKStreamKeeper/Config/logconfig.xml \
@@ -124,9 +124,9 @@ if [ "$ACTION" == deploy-Web ]; then
   # shellcheck disable=SC2046
   #docker rmi $(docker images | grep $APP_WEB_NAME | awk '{print $3}')
 
-  docker run -p 5800:5800 \
-    -p 5060:5060 \
-    -p 5060:5060/udp \
+  docker run -p 35800:5800 \
+    -p 35060:5060 \
+    -p 35060:5060/udp \
     -v ./AKStreamWeb/Config/AKStreamWeb.json:/app/Config/AKStreamWeb.json \
     -v ./AKStreamWeb/Config/SipClientConfig.json:/app/Config/SipClientConfig.json  \
     -v ./AKStreamWeb/Config/SipServerConfig.json:/app/Config/SipServerConfig.json \
@@ -138,9 +138,9 @@ fi
 
 if [ "$ACTION" == run-Web ]; then
 
-  docker run -p 5800:5800 \
-    -p 5060:5060 \
-    -p 5060:5060/udp \
+  docker run -p 35800:5800 \
+    -p 35060:5060 \
+    -p 35060:5060/udp \
     -v ./AKStreamWeb/Config/AKStreamWeb.json:/app/Config/AKStreamWeb.json \
     -v ./AKStreamWeb/Config/SipClientConfig.json:/app/Config/SipClientConfig.json  \
     -v ./AKStreamWeb/Config/SipServerConfig.json:/app/Config/SipServerConfig.json \
